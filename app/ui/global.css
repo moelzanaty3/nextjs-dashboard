@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #001;
-}
-
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
