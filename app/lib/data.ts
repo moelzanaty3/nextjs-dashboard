@@ -1,5 +1,4 @@
 import { sql } from '@vercel/postgres';
-import { unstable_noStore } from 'next/cache';
 
 import {
   CustomerField,
@@ -17,12 +16,7 @@ export async function fetchRevenue() {
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
   // unstable_noStore();
   try {
-    console.log('Fetching revenue data...');
-
     const data = await sql<Revenue>`SELECT * FROM revenue`;
-
-    console.log('Data fetch completed after 3 seconds.');
-
     return data.rows;
   } catch (error) {
     console.error('Database Error:', error);

@@ -3,7 +3,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
+    "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx --fix",
     "lint.staged": "lint-staged",
     "prepare": "husky install",
     "prettier": "prettier --write --ignore-unknown .",
